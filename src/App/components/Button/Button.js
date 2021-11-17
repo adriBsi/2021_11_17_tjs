@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import style from "./Button.module.css";
 import PropTypes from "prop-types";
 /**
@@ -8,15 +8,20 @@ import PropTypes from "prop-types";
  */
 
 const Button = (props) => {
+  const [clicked, setClicked] = useState({ state: false, autreValue: "haha" });
   return (
     <button
-      className={style.Button}
+      className={`${style.Button}${clicked.state ? " " + style.clicked : ""}`}
       style={{
         backgroundColor: props.bgColor,
         color: props.color,
         ...props.style,
       }}
       onClick={(evt) => {
+        setClicked({ ...clicked, state: true });
+        setTimeout(() => {
+          setClicked({ ...clicked, state: false });
+        }, 300);
         // evenement géré par le composant pas renvoyé au parent
         props.onButtonClicked();
       }}
