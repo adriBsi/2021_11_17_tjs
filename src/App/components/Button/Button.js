@@ -1,5 +1,6 @@
 import React from "react";
-import "./Button.css"
+import "./Button.css";
+import PropTypes from 'prop-types';
 /**
  * Composant de button html
  * @param {object} props props du composant
@@ -7,7 +8,21 @@ import "./Button.css"
  */
 
 const Button = (props) => {
-  return <button className="Button">monButton</button>;
+  return (
+    <button
+      className="Button"
+      onClick={(evt) => {
+        // evenement géré par le composant pas renvoyé au parent
+        props.onButtonClicked();
+      }}
+    >
+      {props.text}
+    </button>
+  );
 };
+Button.propTypes={
+    text: PropTypes.string.isRequired,
+    onButtonClicked: PropTypes.func.isRequired,
+}
 
 export default Button;
