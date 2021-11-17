@@ -1,5 +1,5 @@
 import React from "react";
-import "./Button.css";
+import style from "./Button.module.css";
 import PropTypes from "prop-types";
 /**
  * Composant de button html
@@ -10,8 +10,12 @@ import PropTypes from "prop-types";
 const Button = (props) => {
   return (
     <button
-      className="Button"
-      style={{backgroundColor: props.bgColor,color: props.color}}
+      className={style.Button}
+      style={{
+        backgroundColor: props.bgColor,
+        color: props.color,
+        ...props.style,
+      }}
       onClick={(evt) => {
         // evenement géré par le composant pas renvoyé au parent
         props.onButtonClicked();
@@ -26,10 +30,11 @@ Button.propTypes = {
   onButtonClicked: PropTypes.func.isRequired,
   bgColor: PropTypes.string.isRequired,
   color: PropTypes.string.isRequired,
+  style: PropTypes.object,
 };
-Button.defaultProps={
-    bgColor: 'yellowgreen',
-    color: 'white',
-}
+Button.defaultProps = {
+  bgColor: "yellowgreen",
+  color: "white",
+};
 
 export default Button;

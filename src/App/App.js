@@ -8,7 +8,8 @@ function App() {
       <Button text="OK" onButtonClicked={(arg) => alert("Click sur bouton")} />
       <Button
         text="cancel"
-        color='red'
+        color="red"
+        style={{fontSize: '45pt'}}
         onButtonClicked={(arg) => alert("Le user a osé cliquer !")}
       />
       <Button text="User ne clique pas ICI" bgColor="tomato" />
