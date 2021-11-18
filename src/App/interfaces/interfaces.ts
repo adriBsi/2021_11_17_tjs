@@ -1,3 +1,5 @@
+import { Url } from "url";
+
 export interface I_Meme{
     id?: number,
     titre: string,
@@ -11,9 +13,9 @@ export interface I_Meme{
     italic: boolean,
     frameX: number,
     frameY: number,
+    imageId: number,
   }
-
-export interface I_Image{
+  export interface I_Image{
     id: number,
     url: string,
     titre: string,

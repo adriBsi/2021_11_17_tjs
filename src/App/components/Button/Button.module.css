@@ -1,15 +1,15 @@
-.Button {
-  font-weight: 900;
-  padding: 10px 15px;
-  border-radius: 7px;
-  box-shadow: 15px 15px 25px grey;
-  border: none;
-  margin: 5px 12px;
+.Button{
+    font-weight: 900;
+    padding: 10px 15px;
+    border-radius: 7px;
+    box-shadow: 15px 15px 25px GREY;
+    border:none;
+    margin: 5px 12px;
 }
-.Button:hover {
-  box-shadow: 10px 10px 25px grey;
+.Button:hover{
+    box-shadow: 10px 10px 25px GREY;
 }
 .clicked{
-    box-shadow: 5px 5px 25px grey !important;
-    border: 1px solid grey;
+    box-shadow: 5px 5px 25px GREY !important;
+    border:1px solid grey;
 }

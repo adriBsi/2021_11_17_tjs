@@ -1,9 +1,9 @@
-import React from "react";
-import PropTypes from "prop-types";
-import styles from "./FlexLayout.module.scss";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styles from './FlexLayout.module.scss';
 
 const FlexLayout = (props) => {
-  console.group("flexLayout");
+  console.group('FlexLayout');
   console.log(props);
   console.groupEnd();
   return (
@@ -11,7 +11,7 @@ const FlexLayout = (props) => {
       {props.children}
     </div>
   );
-};
+}
 
 FlexLayout.propTypes = {
   children: PropTypes.array.isRequired,
